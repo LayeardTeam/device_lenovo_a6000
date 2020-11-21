@@ -44,6 +44,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_KERNEL_SOURCE := kernel/lenovo/a6000
+TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := lineageos_a6000_defconfig
 
 # File System
