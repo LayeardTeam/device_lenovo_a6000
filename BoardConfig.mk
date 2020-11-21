@@ -35,6 +35,13 @@ TARGET_CPU_VARIANT := cortex-a53
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
+# Kernel Toolchain
+TOP_PATH := $(realpath $(TOP))
+ifneq ($(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-8.3),)
+  KERNEL_TOOLCHAIN := $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-8.3/bin
+  KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+endif
+
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
