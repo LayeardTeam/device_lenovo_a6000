@@ -37,10 +37,8 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Kernel Toolchain
 TOP_PATH := $(realpath $(TOP))
-ifneq ($(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-8.3),)
-  KERNEL_TOOLCHAIN := $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-8.3/bin
-  KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-endif
+KERNEL_TOOLCHAIN := $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-len-linux-gnueabi-
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
