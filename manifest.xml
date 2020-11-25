@@ -28,13 +28,13 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
-        <transport arch="32+64">passthrough</transport>
-        <version>2.4</version>
+        <transport>hwbinder</transport>
+        <version>2.5</version>
         <interface>
             <name>ICameraProvider</name>
-            <instance>external/0</instance>
             <instance>legacy/0</instance>
         </interface>
+        <fqname>@2.5::ICameraProvider/legacy/0</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.configstore</name>
@@ -53,7 +53,7 @@
             <name>IAllocator</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal> 
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
         <transport arch="32+64">passthrough</transport>
