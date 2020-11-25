@@ -282,4 +282,5 @@ on property:init.svc.surfaceflinger=restarting
 # Start it again on boot, just being double sure.
 on property:sys.boot_completed=1
     start set_baseband
+    restart vendor.camera-provider-2-5
     restart cameraserver
