@@ -24,6 +24,7 @@ $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Ancient
+ANCIENT_NOGAPPS := true
 TARGET_GAPPS_ARCH := arm
 IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 720
